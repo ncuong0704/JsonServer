@@ -1,0 +1,38 @@
+
+GET http://localhost:3000/api/products
+
+
+###
+# @name addNew
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+     "categoryID": "5ec218e1-2227-4112-af7e-b35a168cac49",
+    "name": "Mrs. Milo Yundt",
+    "color": "Red",
+    "price": 100
+}
+
+###
+
+# @name update
+PATCH http://localhost:3000/api/products/ClL3nj7
+Content-Type: application/json
+
+{
+    "name": "Miss Kavon Rosenbaum update",
+    "color": "DarkTurquoise update",
+    "price": 96123
+}
+
+###
+
+# @name pagination
+
+GET  http://localhost:3000/api/products?_page=1&_limit=5
+
+###
+
+# @name sort
+GET  http://localhost:3000/api/products?_sort=price&_order=desc
